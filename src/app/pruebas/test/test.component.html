@@ -1,0 +1,50 @@
+<div class="container p-5">
+    <div class="row">
+        <div class="col-sm-8 offset-2">
+
+            <div *ngIf="currentQuiz < 10">
+        
+                <h1 class="text-center">Inducción de Covid-19   </h1>
+                
+                <div class="container p-4">
+                    <p class="text-center">{{ currentQuiz + 1 }} de {{ quizzes.length }} preguntas</p>
+                    <h1 style="text-align: center;">{{ quizzes[randomize].question}}</h1>
+
+                    <ul class="list-group" *ngFor="let quiz of quizzes[randomize].answer">
+                        
+                        <label>
+                            <li class="list-group-item" appBackground [correctAnswer]="quiz.correct">
+                                <input type="radio" name="option" (change)="onAnswer(quiz.correct)" [disabled]="answerSelected">
+                                {{ quiz.option}}
+                            </li>
+                        </label>
+                    </ul>
+                </div>
+
+            </div>
+
+
+
+            <div style="text-align: center;" *ngIf="currentQuiz > 9">
+
+                <div class="container p-3">
+                    <h1 style="text-align: center;">"Dar click en VER RESULTADO para ver si usted a
+                        aprobado o a desaprobado, si en caso haiga aprobado la Inducción dar click en VER CONSTANCIA, o si a desaprobado la Inducción dar click en VOLVER AL VIDEO"</h1>
+                </div>
+
+                <button style="text-align: center; width: 100%;" class="btn btn-success btn-block" (click)="showResult()">Ver Resultado</button>
+
+                <div class="text-center" *ngIf="result">
+                    <br>
+
+                    <h1>Respuestas correctas: {{ correctAnswers }} | Respuestas incorrectas: {{ incorrectAnswers }}</h1>    
+
+                    <button class="btn btn-success" [routerLink]="['/constancia covid']" *ngIf='correctAnswers > 6'>Ver Constancia</button>
+                    <button class="btn btn-success" (click)="siguiente()" *ngIf='incorrectAnswers > 3'>Volver al Video</button>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>

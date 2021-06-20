@@ -1,0 +1,110 @@
+<div class="container p-5">
+    <mat-card>
+<div class="container p-2">
+    <h1 style="text-align:center;">Datos del Trabajador</h1>
+    <form [formGroup]="editarForm" (ngSubmit)="postForm(editarForm.value)" name="form" 
+     #f="ngForm" novalidate>
+
+        <div class="form-group row">
+
+            <div class="col">
+                <label for="nombre">Nombre</label>
+                <input 
+                    type="text" 
+                    class="form-control" 
+                    name="nombre"
+                    [(ngModel)]="form.nombre"
+                    required 
+                    placeholder="Nombre" 
+                    formControlName="nombre"
+                    minlength="3"
+                    maxlength="20"
+                   />
+
+                    <!--div class="alert-danger" *ngIf="nombre.errors && f.submitted">
+                        <div *ngIf="nombre.errors.required">Se requiere nombre</div>
+                        <div *ngIf="nombre.errors.minlength">
+                          El nombre debe tener al menos 3 caracteres
+                        </div>
+                        <div *ngIf="nombre.errors.maxlength">
+                          El nombre de usuario debe tener como máximo 20 caracteres
+                        </div>
+                    </div-->
+
+                    
+
+            </div>
+
+            <div class="col">
+                <label for="exampleFormControlInput1">Apellidos</label>
+                <input type="text" class="form-control" placeholder="Apellidos" formControlName="apellido">
+            </div>
+
+        </div>
+
+        <br>
+
+        <div class="form-group row">
+
+            <div class="col">
+                <label for="exampleFormControlInput1">Edad</label>
+            <input type="text" class="form-control" placeholder="Edad" formControlName="edad">
+            </div>
+
+            <div class="col">
+                <label for="exampleFormControlInput1">Cargo</label>
+                <input type="text" class="form-control" placeholder="Cargo" formControlName="cargo">
+            </div>
+
+            <div class="col">
+                <label for="exampleFormControlInput1">Fecha de Nacimiento</label>
+                <input type="date" class="form-control" placeholder="Fecha de Nacimiento" formControlName="fecha_nacimiento">
+            </div>
+
+        </div>
+
+        <br>
+
+        <div class="form-group row">
+
+            <div class="col">
+                <label for="exampleFormControlInput1">DNI</label>
+                <input type="text" class="form-control" placeholder="DNI" formControlName="dni">
+            </div>
+
+            <div class="col">
+                <label for="exampleFormControlInput1">Dirección</label>
+                <input type="text" class="form-control" placeholder="Dirección" formControlName="direccion">
+            </div>
+
+            <div class="col">
+                <label for="exampleFormControlInput1">Talla</label>
+                <input type="text" class="form-control" placeholder="Talla" formControlName="talla">
+            </div>
+
+        </div>
+
+        <br>
+
+        <div class="form-group row">
+
+            <div class="col">
+                <label for="exampleFormControlInput1">Peso</label>
+                <input type="text" class="form-control" placeholder="Peso" formControlName="peso">
+            </div>
+
+            <div class="col">
+                <label for="exampleFormControlInput1">Teléfono</label>
+                <input type="text" class="form-control" placeholder="Teléfono" formControlName="telefono">
+            </div>
+
+        </div>
+
+        <br>
+
+        <button type="submit" class="btn btn-primary" style="width: 100%;" (click)="navigate()">Editar</button>
+    </form>
+</div>
+    </mat-card>
+</div>
+

@@ -1,0 +1,1461 @@
+<div class="login-page">
+  <mat-card class="mat-elevation-z12">
+
+    <mat-card-title style="text-align:center;">Requisitos de Seguridad</mat-card-title>
+
+    <mat-tab-group mat-stretch-tabs class="example-stretched-tabs">
+        
+<!---------------------------------Taps 1------------------------------------->
+      <mat-tab label="Bajo">
+        <div class="container p-3">
+
+          <div class="container p-3">
+            <p class="text-center">Para adjuntar los documentos debe dar click en una de las siguientes lineas, la cual le redireccionará
+              a seleccionar un documento correspondiente:  </p>
+          </div>
+
+          <form name="form" #f="ngForm" (ngSubmit)="f.form.valid" novalidate>
+
+            <div class="form-group row">
+              <div class="col">
+                <label for="nombre">DNI:</label>
+                <input 
+                  type="file" 
+                  class="form-control" 
+                  name="dni"
+                  [(ngModel)]="form.dni"
+                  required
+                  (change)="selectFiles1($event)" 
+                  #dni="ngModel"/>
+  
+                    <div class="alert-danger" *ngIf="dni.errors && f.submitted">
+                        <div *ngIf="dni.errors.required">Se requiere documento</div>
+                        <div *ngIf="dni.errors.minlength">
+                          El nombre debe tener al menos 3 caracteres
+                        </div>
+                        <div *ngIf="dni.errors.maxlength">
+                          El nombre de usuario debe tener como máximo 20 caracteres
+                        </div>
+                    </div>
+              </div> 
+
+              <div class="col">
+                <label for="nombre">SCTR:</label>
+                <input 
+                  type="file" 
+                  class="form-control" 
+                  name="sctr"
+                  [(ngModel)]="form.sctr"
+                  required
+                  (change)="selectFiles2($event)" 
+                  #sctr="ngModel"/>
+  
+                  <div class="alert-danger" *ngIf="sctr.errors && f.submitted">
+                        <div *ngIf="sctr.errors.required">Se requiere documento</div>
+                        <div *ngIf="sctr.errors.minlength">
+                          El nombre debe tener al menos 3 caracteres
+                        </div>
+                        <div *ngIf="sctr.errors.maxlength">
+                          El nombre de usuario debe tener como máximo 20 caracteres
+                        </div>
+                  </div>
+              </div>
+            </div>
+
+            <br>
+
+            <div class="form-group row">
+              <div class="col">
+              <label for="nombre">Declaracion Jurada de Cumplimiento en Normas de SST: </label>
+
+                <a mat-list-item routerLinkActive="list-item-active" routerLink="/obligaciones"> Visualizar</a>
+                <a> / </a>
+                <a href="./documentos/C24-Ficha de evaluación de pasantías.doc" download>Descargar</a>
+
+              <input 
+                type="file" 
+                class="form-control" 
+                name="sst"
+                [(ngModel)]="form.sst"
+                required
+                (change)="selectFiles3($event)" 
+                #sst="ngModel"/>
+
+                <div class="alert-danger" *ngIf="sst.errors && f.submitted">
+                    <div *ngIf="sst.errors.required">Se requiere documento</div>
+                    <div *ngIf="sst.errors.minlength">
+                      El nombre debe tener al menos 3 caracteres
+                    </div>
+                    <div *ngIf="sst.errors.maxlength">
+                      El nombre de usuario debe tener como máximo 20 caracteres
+                    </div>
+                </div>
+              </div> 
+              
+              <div class="col">
+                <label for="nombre">Constancia y Capacitacion RISST y Política:</label>
+
+                <a mat-list-item routerLinkActive="list-item-active" routerLink="/obligaciones"> Visualizar</a>
+                <a> / </a>
+                <a href="./documentos/C24-Ficha de evaluación de pasantías.doc" download>Descargar</a>
+
+                <input 
+                  type="file" 
+                  class="form-control" 
+                  name="risst"
+                  [(ngModel)]="form.risst"
+                  required
+                  (change)="selectFiles4($event)" 
+                  #risst="ngModel"/>
+
+                    <div class="alert-danger" *ngIf="risst.errors && f.submitted">
+                        <div *ngIf="risst.errors.required">Se requiere documento</div>
+                        <div *ngIf="risst.errors.minlength">
+                          El nombre debe tener al menos 3 caracteres
+                        </div>
+                        <div *ngIf="risst.errors.maxlength">
+                          El nombre de usuario debe tener como máximo 20 caracteres
+                        </div>
+                    </div>
+
+              </div>   
+            </div>
+
+            <br>
+
+            <div>
+
+            <div class="col">
+                <label for="nombre">Registro de Equipos de Protección Personal:</label>
+
+                <a href="./documentos/C24-Ficha de evaluación de pasantías.doc" download> Visualizar</a>
+                <a> / </a>
+                <a href="./documentos/C24-Ficha de evaluación de pasantías.doc" download>Descargar</a>
+                
+                <input 
+                  type="file" 
+                  class="form-control" 
+                  name="repp"
+                  [(ngModel)]="form.repp"
+                  required
+                  (change)="selectFiles5($event)" 
+                  #repp="ngModel"/>
+
+                    <div class="alert-danger" *ngIf="repp.errors && f.submitted">
+                        <div *ngIf="repp.errors.required">Se requiere documento</div>
+                        <div *ngIf="repp.errors.minlength">
+                          El nombre debe tener al menos 3 caracteres
+                        </div>
+                        <div *ngIf="repp.errors.maxlength">
+                          El nombre de usuario debe tener como máximo 20 caracteres
+                        </div>
+                    </div>
+
+            </div>              
+
+            </div>
+
+            <br>
+
+            <div>
+
+            <div class="col">
+                <label for="nombre">Registro de Inducción, Capacitación, Entrenamiento y Simulacros de Emergencia:</label>
+
+                <a href="./documentos/C24-Ficha de evaluación de pasantías.doc" download> Visualizar</a>
+                <a> / </a>
+                <a href="./documentos/C24-Ficha de evaluación de pasantías.doc" download>Descargar</a>
+
+                <input 
+                    type="file" 
+                    class="form-control" 
+                    name="ricese"
+                    [(ngModel)]="form.ricese"
+                    required
+                    (change)="selectFiles6($event)" 
+                    #ricese="ngModel"/>
+
+                    <div class="alert-danger" *ngIf="ricese.errors && f.submitted">
+                        <div *ngIf="ricese.errors.required">Se requiere el documento</div>
+                        <div *ngIf="ricese.errors.minlength">
+                          El nombre debe tener al menos 3 caracteres
+                        </div>
+                        <div *ngIf="ricese.errors.maxlength">
+                          El nombre de usuario debe tener como máximo 20 caracteres
+                        </div>
+                    </div>
+
+            </div>              
+
+            </div>
+
+            <br>
+
+            <div>
+
+              <div class="col">
+                  <label for="nombre">Especifique la tarea a realizar:</label>
+                  <input 
+                      type="text" 
+                      class="form-control" 
+                      name="tarea"
+                      [(ngModel)]="form.tarea"
+                      required 
+                      placeholder="Especifique la tarea a realizar" 
+                      minlength="3"
+                      maxlength="20"
+                      #tarea="ngModel"/>
+  
+                      <div class="alert-danger" *ngIf="tarea.errors && f.submitted">
+                          <div *ngIf="tarea.errors.required">Se requiere tarea</div>
+                          <div *ngIf="tarea.errors.minlength">
+                            El nombre debe tener al menos 3 caracteres
+                          </div>
+                          <div *ngIf="tarea.errors.maxlength">
+                            El nombre de usuario debe tener como máximo 20 caracteres
+                          </div>
+                      </div>
+  
+              </div>              
+  
+            </div>
+
+            <br>
+          
+            <div class="form-group row">
+
+            <div class="col">
+              <label for="apellido">Fecha de Inicio:</label>
+              <input 
+                  type="date" 
+                  class="form-control" 
+                  name="inicio"
+                  [(ngModel)]="form.inicio"
+                  required  
+                  minlength="3"
+                  maxlength="20"
+                  #inicio="ngModel"/>
+  
+                  <div class="alert-danger" *ngIf="inicio.errors && f.submitted">
+                      <div *ngIf="inicio.errors.required">Se requieren la fecha de inicio</div>
+                      <div *ngIf="inicio.errors.minlength">
+                        El apellido debe tener al menos 5 caracteres
+                      </div>
+                      <div *ngIf="inicio.errors.maxlength">
+                        El apellido debe tener como máximo 20 caracteres
+                      </div>
+                  </div>
+  
+            </div>
+
+            <div class="col">
+            <label for="apellido">Fecha de Fin:</label>
+            <input 
+                type="date" 
+                class="form-control" 
+                name="fin"
+                [(ngModel)]="form.fin"
+                required  
+                minlength="3"
+                maxlength="20"
+                #fin="ngModel"/>
+
+                <div class="alert-danger" *ngIf="fin.errors && f.submitted">
+                    <div *ngIf="fin.errors.required">Se requiere la fecha final</div>
+                    <div *ngIf="fin.errors.minlength">
+                      El apellido debe tener al menos 5 caracteres
+                    </div>
+                    <div *ngIf="fin.errors.maxlength">
+                      El apellido debe tener como máximo 20 caracteres
+                    </div>
+                </div>
+
+            </div>          
+
+            </div>
+          
+           <br>
+
+           <div>
+            <div class="col">
+              <label for="apellido">Supervisor a cargo:</label>
+              <input 
+                  type="text" 
+                  class="form-control" 
+                  name="supervisor"
+                  [(ngModel)]="form.supervisor"
+                  required 
+                  placeholder="Supervisor a cargo" 
+                  minlength="3"
+                  maxlength="20"
+                  #supervisor="ngModel"/>
+  
+                  <div class="alert-danger" *ngIf="supervisor.errors && f.submitted">
+                      <div *ngIf="supervisor.errors.required">Se requiere al supervisor</div>
+                      <div *ngIf="supervisor.errors.minlength">
+                        El apellido debe tener al menos 5 caracteres
+                      </div>
+                      <div *ngIf="supervisor.errors.maxlength">
+                        El apellido debe tener como máximo 20 caracteres
+                      </div>
+                  </div>
+  
+          </div>
+
+           </div>
+      
+           <br>
+
+           <div class="col">
+            <button type="submit" class="btn btn-primary" style="width: 100%;" (click)="uploadFiles()">Enviar</button>
+           </div>
+                
+          </form>
+
+          <!--mat-card-content>
+              <form action="">
+                <mat-form-field>
+                  <ngx-mat-file-input  placeholder="DNI" ></ngx-mat-file-input>
+                  <mat-icon matSuffix>folder</mat-icon>
+                  <mat-error
+                    *ngIf="">
+                    DNI es requerido
+                  </mat-error>
+                </mat-form-field>
+    
+                <mat-form-field>
+                  <ngx-mat-file-input  placeholder="SCTR" ></ngx-mat-file-input>
+                  <mat-icon matSuffix>folder</mat-icon>
+                  <mat-error
+                    *ngIf="">
+                    SCTR es requerido
+                  </mat-error>
+                </mat-form-field>     
+    
+                <mat-form-field>
+                  <div class="des1">
+                    <a href="./documentos/C24-Ficha de evaluación de pasantías.doc" download>Descargar</a>
+                  </div>
+                  <ngx-mat-file-input  placeholder="Declaración Jurada de Cumplimiento en Normas de SST" ></ngx-mat-file-input>
+                  <mat-icon matSuffix>folder</mat-icon>
+                  <mat-error
+                    *ngIf="">
+                    Declaracion es requerido
+                  </mat-error>
+    
+                </mat-form-field>
+    
+                <mat-form-field>
+                  <div class="des2">
+                    <a href="./documentos/C24-Ficha de evaluación de pasantías.doc" download>Descargar</a>
+                  </div>
+                  <ngx-mat-file-input  placeholder="Constancia y Capacitación RISST y Política" ></ngx-mat-file-input>
+                  <mat-icon matSuffix>folder</mat-icon>
+                  <mat-error
+                    *ngIf="">
+                   Constancia es requerido
+                  </mat-error>
+    
+                </mat-form-field>
+    
+                <mat-form-field>
+                  <ngx-mat-file-input  placeholder="Registro de Equipos de Protección Personal" ></ngx-mat-file-input>
+                  <mat-icon matSuffix>folder</mat-icon>
+                  <mat-error
+                    *ngIf="">
+                    Registro es requerido
+                  </mat-error>
+    
+                </mat-form-field>
+    
+                <mat-form-field>
+                  <input
+                    matInput
+                    placeholder="Especifique la tarea a realizar"
+                    required
+                    name="tarea"
+                    ngModel
+                    #tarea="ngModel">
+                  <mat-icon matSuffix>perm_identity</mat-icon>
+                  <mat-error
+                    *ngIf="tarea.invalid">
+                    Tarea es requerido
+                  </mat-error>
+    
+                </mat-form-field>
+    
+                <mat-form-field>
+                  <input
+                    matInput
+                    placeholder="Fecha de inicio"
+                    required
+                    name="fechainicio"
+                    type="date"
+                    ngModel
+                    #fechainicio="ngModel">
+                  <mat-error
+                    *ngIf="fechainicio.invalid">
+                    Fecha de inicio es requerido
+                  </mat-error>
+    
+                </mat-form-field>
+    
+                <mat-form-field>
+                  <input
+                    matInput
+                    placeholder="Fecha de fin"
+                    required
+                    name="fechafin"
+                    type="date"
+                    ngModel
+                    #fechafin="ngModel">
+                  <mat-error
+                    *ngIf="fechafin.invalid">
+                    Fecha de Fin es requerido
+                  </mat-error>
+    
+                </mat-form-field>
+    
+                <mat-form-field>
+                  <input
+                    matInput
+                    placeholder="Supervisor a cargo"
+                    required
+                    name="supervisor"
+                    ngModel
+                    #supervisor="ngModel">
+                  <mat-icon matSuffix>perm_identity</mat-icon>
+                  <mat-error
+                    *ngIf="supervisor.invalid">
+                    Supervisor es requerido
+                  </mat-error>
+    
+                </mat-form-field>
+
+                <mat-form-field>
+                  <div class="des7">
+                    <a href="./documentos/C24-Ficha de evaluación de pasantías.doc" download>Descargar</a>
+                  </div>
+                  <ngx-mat-file-input  placeholder="Registro de Inducción, Capacitación, Entrenamiento y Simulacros de Emergencia"></ngx-mat-file-input>
+                  <mat-icon matSuffix>folder</mat-icon>
+                  <mat-error
+                    *ngIf="">
+                   Permiso es requerido
+                  </mat-error>
+    
+                </mat-form-field>
+      
+                <button
+                  mat-raised-button
+                  color="primary"
+                  class="login-button">
+                  Enviar
+                </button>
+
+              </form>
+            </mat-card-content-->
+        </div>
+
+        <div class="container p-3" style="width:600px">
+
+          <div *ngFor="let progressInfo of progressInfos" class="mb-2">
+            <span>{{ progressInfo.fileName }}</span>
+            <div class="progress">
+              <div
+                class="progress-bar progress-bar-info progress-bar-striped"
+                role="progressbar"
+                attr.aria-valuenow="{{ progressInfo.value }}"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                [ngStyle]="{ width: progressInfo.value + '%' }"
+              >
+                {{ progressInfo.value }}%
+              </div>
+            </div>
+          </div>
+        
+          <div *ngIf="message.length" class="alert alert-secondary my-3" role="alert">
+            <ul *ngFor="let msg of message; let i = index">
+              <li>{{ msg }}</li>
+            </ul>
+          </div>
+        
+          <div class="card mt-3">
+            <div class="card-header">Lista de Documentos Subidos</div>
+            <ul
+              class="list-group list-group-flush"
+              *ngFor="let file of fileInfos | async"
+            >
+              <li class="list-group-item">
+                <a href="{{ file.url }}">{{ file.name }}</a>
+              </li>
+            </ul>
+          </div>
+        
+        </div>
+
+        
+      </mat-tab>
+
+<!---------------------------------Taps 2------------------------------------->
+      <mat-tab label="Medio">
+        <div class="container p-2">
+
+          <div class="container p-3">
+            <p class="text-center">Para adjuntar los documentos debe dar click en una de las siguientes lineas, la cual le redireccionará 
+              a seleccionar un documento correspondiente:  </p>
+          </div>
+
+          <form action="">
+
+              <div>
+
+                <div class="col">
+                    <label for="nombre">DNI:</label>
+                    <input 
+                        type="file" 
+                        class="form-control" 
+                        name="nombre"
+                        
+                        required 
+                      
+                        />
+    
+                        <!--div class="alert-danger" *ngIf="nombre.errors && f.submitted">
+                            <div *ngIf="nombre.errors.required">Se requiere nombre</div>
+                            <div *ngIf="nombre.errors.minlength">
+                              El nombre debe tener al menos 3 caracteres
+                            </div>
+                            <div *ngIf="nombre.errors.maxlength">
+                              El nombre de usuario debe tener como máximo 20 caracteres
+                            </div>
+                        </div-->
+                </div>              
+    
+              </div>
+
+              <br>
+
+              <div >
+
+                  <div class="col">
+                      <label for="nombre">SCTR:</label>
+                      <input 
+                          type="file" 
+                          class="form-control" 
+                          name="nombre"
+                          
+                          required 
+                          
+                        
+                          />
+      
+                          <!--div class="alert-danger" *ngIf="nombre.errors && f.submitted">
+                              <div *ngIf="nombre.errors.required">Se requiere nombre</div>
+                              <div *ngIf="nombre.errors.minlength">
+                                El nombre debe tener al menos 3 caracteres
+                              </div>
+                              <div *ngIf="nombre.errors.maxlength">
+                                El nombre de usuario debe tener como máximo 20 caracteres
+                              </div>
+                          </div-->
+      
+                  </div>              
+      
+              </div>
+
+              <br>
+
+              
+              <div>
+
+                  <div class="col">
+                      <label for="nombre">Declaracion Jurada de Cumplimiento en Normas de SST: -------- </label>
+
+                      <a mat-list-item routerLinkActive="list-item-active" routerLink="/obligaciones">Visualizar</a>
+                      <a>--------</a>
+                     <a href="./documentos/C24-Ficha de evaluación de pasantías.doc" download>Descargar</a>
+
+                      <input 
+                          type="file" 
+                          class="form-control" 
+                          name="nombre"
+                          
+                          required 
+                          
+                        
+                          />
+      
+                          <!--div class="alert-danger" *ngIf="nombre.errors && f.submitted">
+                              <div *ngIf="nombre.errors.required">Se requiere nombre</div>
+                              <div *ngIf="nombre.errors.minlength">
+                                El nombre debe tener al menos 3 caracteres
+                              </div>
+                              <div *ngIf="nombre.errors.maxlength">
+                                El nombre de usuario debe tener como máximo 20 caracteres
+                              </div>
+                          </div-->
+      
+                  </div>           
+      
+              </div>
+
+              <br>
+
+              <div >
+
+                  <div class="col">
+                      <label for="nombre">Constancia y Capacitacion RISST y Política: --------> </label>
+
+                      <a href="./documentos/C24-Ficha de evaluación de pasantías.doc" download>Visualizar</a>
+
+                      <input 
+                          type="file" 
+                          class="form-control" 
+                          name="nombre"
+                          
+                          required 
+                          
+                        
+                          />
+      
+                          <!--div class="alert-danger" *ngIf="nombre.errors && f.submitted">
+                              <div *ngIf="nombre.errors.required">Se requiere nombre</div>
+                              <div *ngIf="nombre.errors.minlength">
+                                El nombre debe tener al menos 3 caracteres
+                              </div>
+                              <div *ngIf="nombre.errors.maxlength">
+                                El nombre de usuario debe tener como máximo 20 caracteres
+                              </div>
+                          </div-->
+      
+                  </div>              
+      
+              </div>
+
+              <br>
+
+              <div>
+
+                <div class="col">
+                    <label for="nombre">Registro de Equipos de Protección Personal: --------</label>
+
+                    <a href="./documentos/C24-Ficha de evaluación de pasantías.doc" download>Visualizar</a>
+                    <a>--------</a>
+                    <a href="./documentos/C24-Ficha de evaluación de pasantías.doc" download>Descargar</a>
+                    
+                    <input 
+                        type="file" 
+                        class="form-control" 
+                        name="nombre"
+                        
+                        required 
+                        
+                      
+                        />
+
+                        <!--div class="alert-danger" *ngIf="nombre.errors && f.submitted">
+                            <div *ngIf="nombre.errors.required">Se requiere nombre</div>
+                            <div *ngIf="nombre.errors.minlength">
+                              El nombre debe tener al menos 3 caracteres
+                            </div>
+                            <div *ngIf="nombre.errors.maxlength">
+                              El nombre de usuario debe tener como máximo 20 caracteres
+                            </div>
+                        </div-->
+
+                </div>              
+
+              </div>
+
+              <br>
+
+              <div>
+
+                  <div class="col">
+                      <label for="nombre">Especifique la tarea a realizar:</label>
+                      <input 
+                          type="text" 
+                          class="form-control" 
+                          name="nombre"
+                          
+                          required 
+                          placeholder="Especifique la tarea a realizar" 
+                          minlength="3"
+                          maxlength="20" 
+                          />
+      
+                          <!--div class="alert-danger" *ngIf="nombre.errors && f.submitted">
+                              <div *ngIf="nombre.errors.required">Se requiere nombre</div>
+                              <div *ngIf="nombre.errors.minlength">
+                                El nombre debe tener al menos 3 caracteres
+                              </div>
+                              <div *ngIf="nombre.errors.maxlength">
+                                El nombre de usuario debe tener como máximo 20 caracteres
+                              </div>
+                          </div-->
+      
+                  </div>              
+      
+              </div>
+
+              <br>
+
+              <div>
+                <div class="col">
+                  <label for="apellido">Fecha de Inicio:</label>
+                  <input 
+                      type="date" 
+                      class="form-control" 
+                      name="apellido"
+                      
+                      required 
+                      placeholder="Fecha de Inicio:" 
+                      minlength="5"
+                      maxlength="20" 
+                      />
+      
+                      <!--div class="alert-danger" *ngIf="apellido.errors && f.submitted">
+                          <div *ngIf="apellido.errors.required">Se requieren apellidos</div>
+                          <div *ngIf="apellido.errors.minlength">
+                            El apellido debe tener al menos 5 caracteres
+                          </div>
+                          <div *ngIf="apellido.errors.maxlength">
+                            El apellido debe tener como máximo 20 caracteres
+                          </div>
+                      </div-->
+      
+              </div>
+
+              </div>
+
+              <br>
+
+              <div>
+                <div class="col">
+                  <label for="apellido">Fecha de Fin:</label>
+                  <input 
+                      type="date" 
+                      class="form-control" 
+                      name="apellido"
+                      
+                      required 
+                      placeholder="Fecha de Fin" 
+                      minlength="5"
+                      maxlength="20" 
+                      />
+      
+                      <!--div class="alert-danger" *ngIf="apellido.errors && f.submitted">
+                          <div *ngIf="apellido.errors.required">Se requieren apellidos</div>
+                          <div *ngIf="apellido.errors.minlength">
+                            El apellido debe tener al menos 5 caracteres
+                          </div>
+                          <div *ngIf="apellido.errors.maxlength">
+                            El apellido debe tener como máximo 20 caracteres
+                          </div>
+                      </div-->
+      
+              </div>
+
+              </div>
+
+              <br>
+
+              <div>
+                <div class="col">
+                  <label for="apellido">Supervisor a cargo:</label>
+                  <input 
+                      type="text" 
+                      class="form-control" 
+                      name="apellido"
+                      
+                      required 
+                      placeholder="Supervisor a cargo" 
+                      minlength="5"
+                      maxlength="20" 
+                      />
+      
+                      <!--div class="alert-danger" *ngIf="apellido.errors && f.submitted">
+                          <div *ngIf="apellido.errors.required">Se requieren apellidos</div>
+                          <div *ngIf="apellido.errors.minlength">
+                            El apellido debe tener al menos 5 caracteres
+                          </div>
+                          <div *ngIf="apellido.errors.maxlength">
+                            El apellido debe tener como máximo 20 caracteres
+                          </div>
+                      </div-->
+      
+              </div>
+
+              </div>
+
+              <br>
+
+              <div>
+
+                  <div class="col">
+                      <label for="nombre">Registro de Inducción, Capacitación, Entrenamiento y Simulacros de Emergencia: --------</label>
+                  
+                      <a href="./documentos/C24-Ficha de evaluación de pasantías.doc" download>Descargar</a>
+
+                      <input 
+                          type="file" 
+                          class="form-control" 
+                          name="nombre"
+                          required/>
+      
+                          <!--div class="alert-danger" *ngIf="nombre.errors && f.submitted">
+                              <div *ngIf="nombre.errors.required">Se requiere nombre</div>
+                              <div *ngIf="nombre.errors.minlength">
+                                El nombre debe tener al menos 3 caracteres
+                              </div>
+                              <div *ngIf="nombre.errors.maxlength">
+                                El nombre de usuario debe tener como máximo 20 caracteres
+                              </div>
+                          </div-->
+      
+                  </div>              
+      
+              </div>          
+              
+              <br>
+
+              <div>
+
+                <div class="col">
+                    <label for="nombre">Registro de Capacitaciones Específicas:</label>
+                    <input 
+                        type="file" 
+                        class="form-control" 
+                        name="nombre"
+                        
+                        required 
+                      
+                        />
+    
+                        <!--div class="alert-danger" *ngIf="nombre.errors && f.submitted">
+                            <div *ngIf="nombre.errors.required">Se requiere nombre</div>
+                            <div *ngIf="nombre.errors.minlength">
+                              El nombre debe tener al menos 3 caracteres
+                            </div>
+                            <div *ngIf="nombre.errors.maxlength">
+                              El nombre de usuario debe tener como máximo 20 caracteres
+                            </div>
+                        </div-->
+                </div>              
+    
+              </div>
+
+              <br>
+
+              <div>
+
+              <div class="col">
+                  <label for="nombre">Análisis de Trabajo Seguro: --------</label>
+                  <a href="./documentos/C24-Ficha de evaluación de pasantías.doc" download>Descargar</a>
+
+
+                  <input 
+                      type="file" 
+                      class="form-control" 
+                      name="nombre"
+                      
+                      required 
+                    
+                      />
+  
+                      <!--div class="alert-danger" *ngIf="nombre.errors && f.submitted">
+                          <div *ngIf="nombre.errors.required">Se requiere nombre</div>
+                          <div *ngIf="nombre.errors.minlength">
+                            El nombre debe tener al menos 3 caracteres
+                          </div>
+                          <div *ngIf="nombre.errors.maxlength">
+                            El nombre de usuario debe tener como máximo 20 caracteres
+                          </div>
+                      </div-->
+              </div>              
+  
+              </div>
+
+              <br>
+
+              <div>
+
+            <div class="col">
+                <label for="nombre">Procedimiento Estándar de Trabajo Seguro: --------</label>
+            
+                <a href="./documentos/C24-Ficha de evaluación de pasantías.doc" download>Descargar</a>
+
+                <input 
+                    type="file" 
+                    class="form-control" 
+                    name="nombre"
+                    required/>
+
+                    <!--div class="alert-danger" *ngIf="nombre.errors && f.submitted">
+                        <div *ngIf="nombre.errors.required">Se requiere nombre</div>
+                        <div *ngIf="nombre.errors.minlength">
+                          El nombre debe tener al menos 3 caracteres
+                        </div>
+                        <div *ngIf="nombre.errors.maxlength">
+                          El nombre de usuario debe tener como máximo 20 caracteres
+                        </div>
+                    </div-->
+
+            </div>              
+
+              </div> 
+
+              <br>
+
+              <div>
+
+          <div class="col">
+              <label for="nombre">Identificación de Peligros, Evaluación de Riesgos y Medidas de Control: --------</label>
+          
+              <a href="./documentos/C24-Ficha de evaluación de pasantías.doc" download>Descargar</a>
+
+              <input 
+                  type="file" 
+                  class="form-control" 
+                  name="nombre"
+                  required/>
+
+                  <!--div class="alert-danger" *ngIf="nombre.errors && f.submitted">
+                      <div *ngIf="nombre.errors.required">Se requiere nombre</div>
+                      <div *ngIf="nombre.errors.minlength">
+                        El nombre debe tener al menos 3 caracteres
+                      </div>
+                      <div *ngIf="nombre.errors.maxlength">
+                        El nombre de usuario debe tener como máximo 20 caracteres
+                      </div>
+                  </div-->
+
+          </div>              
+
+              </div>
+
+              <br>
+
+              <div class="col">
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Enviar</button>
+              </div>
+
+          </form>
+
+        </div>
+      </mat-tab>
+
+<!---------------------------------Taps 3------------------------------------->
+      <mat-tab label="Alto">
+        <div class="container p-2">
+
+          <div class="container p-3">
+            <p class="text-center">Para adjuntar los documentos debe dar click en una de las siguientes lineas, la cual le redireccionará 
+              a seleccionar un documento correspondiente:  </p>
+          </div>
+
+          <form action="">
+
+              <div>
+
+                <div class="col">
+                    <label for="nombre">DNI:</label>
+                    <input 
+                        type="file" 
+                        class="form-control" 
+                        name="nombre"
+                        
+                        required 
+                      
+                        />
+    
+                        <!--div class="alert-danger" *ngIf="nombre.errors && f.submitted">
+                            <div *ngIf="nombre.errors.required">Se requiere nombre</div>
+                            <div *ngIf="nombre.errors.minlength">
+                              El nombre debe tener al menos 3 caracteres
+                            </div>
+                            <div *ngIf="nombre.errors.maxlength">
+                              El nombre de usuario debe tener como máximo 20 caracteres
+                            </div>
+                        </div-->
+                </div>              
+    
+              </div>
+
+              <br>
+
+              <div>
+
+                  <div class="col">
+                      <label for="nombre">SCTR:</label>
+                      <input 
+                          type="file" 
+                          class="form-control" 
+                          name="nombre"
+                          
+                          required 
+                          
+                        
+                          />
+      
+                          <!--div class="alert-danger" *ngIf="nombre.errors && f.submitted">
+                              <div *ngIf="nombre.errors.required">Se requiere nombre</div>
+                              <div *ngIf="nombre.errors.minlength">
+                                El nombre debe tener al menos 3 caracteres
+                              </div>
+                              <div *ngIf="nombre.errors.maxlength">
+                                El nombre de usuario debe tener como máximo 20 caracteres
+                              </div>
+                          </div-->
+      
+                  </div>              
+      
+              </div>
+
+              <br>
+    
+              <div>
+
+                  <div class="col">
+                      <label for="nombre">Declaracion Jurada de Cumplimiento en Normas de SST: -------- </label>
+
+                        <a mat-list-item routerLinkActive="list-item-active" routerLink="/obligaciones">Visualizar</a>
+                        <a>--------</a>
+                        <a href="./documentos/C24-Ficha de evaluación de pasantías.doc" download>Descargar</a>
+
+                      <input 
+                          type="file" 
+                          class="form-control" 
+                          name="nombre"
+                          
+                          required 
+                          
+                        
+                          />
+      
+                          <!--div class="alert-danger" *ngIf="nombre.errors && f.submitted">
+                              <div *ngIf="nombre.errors.required">Se requiere nombre</div>
+                              <div *ngIf="nombre.errors.minlength">
+                                El nombre debe tener al menos 3 caracteres
+                              </div>
+                              <div *ngIf="nombre.errors.maxlength">
+                                El nombre de usuario debe tener como máximo 20 caracteres
+                              </div>
+                          </div-->
+      
+                  </div>           
+      
+              </div>
+
+              <br>
+
+              <div>
+
+                  <div class="col">
+                      <label for="nombre">Constancia y Capacitacion RISST y Política: --------> </label>
+
+                      <a href="./documentos/C24-Ficha de evaluación de pasantías.doc" download>Visualizar</a>
+
+                      <input 
+                          type="file" 
+                          class="form-control" 
+                          name="nombre"
+                          
+                          required 
+                          
+                        
+                          />
+      
+                          <!--div class="alert-danger" *ngIf="nombre.errors && f.submitted">
+                              <div *ngIf="nombre.errors.required">Se requiere nombre</div>
+                              <div *ngIf="nombre.errors.minlength">
+                                El nombre debe tener al menos 3 caracteres
+                              </div>
+                              <div *ngIf="nombre.errors.maxlength">
+                                El nombre de usuario debe tener como máximo 20 caracteres
+                              </div>
+                          </div-->
+      
+                  </div>              
+      
+              </div>
+
+              <br>
+
+              <div>
+
+                <div class="col">
+                    <label for="nombre">Registro de Equipos de Protección Personal: --------</label>
+
+                    <a href="./documentos/C24-Ficha de evaluación de pasantías.doc" download>Visualizar</a>
+                    <a>--------</a>
+                    <a href="./documentos/C24-Ficha de evaluación de pasantías.doc" download>Descargar</a>
+                    
+                    <input 
+                        type="file" 
+                        class="form-control" 
+                        name="nombre"
+                        
+                        required 
+                        
+                      
+                        />
+
+                        <!--div class="alert-danger" *ngIf="nombre.errors && f.submitted">
+                            <div *ngIf="nombre.errors.required">Se requiere nombre</div>
+                            <div *ngIf="nombre.errors.minlength">
+                              El nombre debe tener al menos 3 caracteres
+                            </div>
+                            <div *ngIf="nombre.errors.maxlength">
+                              El nombre de usuario debe tener como máximo 20 caracteres
+                            </div>
+                        </div-->
+
+                </div>              
+
+              </div>
+
+              <br>
+
+              <div>
+
+                  <div class="col">
+                      <label for="nombre">Especifique la tarea a realizar:</label>
+                      <input 
+                          type="text" 
+                          class="form-control" 
+                          name="nombre"
+                          
+                          required 
+                          placeholder="Especifique la tarea a realizar" 
+                          minlength="3"
+                          maxlength="20" 
+                          />
+      
+                          <!--div class="alert-danger" *ngIf="nombre.errors && f.submitted">
+                              <div *ngIf="nombre.errors.required">Se requiere nombre</div>
+                              <div *ngIf="nombre.errors.minlength">
+                                El nombre debe tener al menos 3 caracteres
+                              </div>
+                              <div *ngIf="nombre.errors.maxlength">
+                                El nombre de usuario debe tener como máximo 20 caracteres
+                              </div>
+                          </div-->
+      
+                  </div>              
+      
+              </div>
+
+              <br>
+
+              <div>
+                <div class="col">
+                  <label for="apellido">Fecha de Inicio:</label>
+                  <input 
+                      type="date" 
+                      class="form-control" 
+                      name="apellido"
+                      
+                      required 
+                      placeholder="Fecha de Inicio:" 
+                      minlength="5"
+                      maxlength="20" 
+                      />
+      
+                      <!--div class="alert-danger" *ngIf="apellido.errors && f.submitted">
+                          <div *ngIf="apellido.errors.required">Se requieren apellidos</div>
+                          <div *ngIf="apellido.errors.minlength">
+                            El apellido debe tener al menos 5 caracteres
+                          </div>
+                          <div *ngIf="apellido.errors.maxlength">
+                            El apellido debe tener como máximo 20 caracteres
+                          </div>
+                      </div-->
+      
+              </div>
+
+              </div>
+
+              <br>
+
+              <div>
+                <div class="col">
+                  <label for="apellido">Fecha de Fin:</label>
+                  <input 
+                      type="date" 
+                      class="form-control" 
+                      name="apellido"
+                      
+                      required 
+                      placeholder="Fecha de Fin" 
+                      minlength="5"
+                      maxlength="20" 
+                      />
+      
+                      <!--div class="alert-danger" *ngIf="apellido.errors && f.submitted">
+                          <div *ngIf="apellido.errors.required">Se requieren apellidos</div>
+                          <div *ngIf="apellido.errors.minlength">
+                            El apellido debe tener al menos 5 caracteres
+                          </div>
+                          <div *ngIf="apellido.errors.maxlength">
+                            El apellido debe tener como máximo 20 caracteres
+                          </div>
+                      </div-->
+      
+              </div>
+
+              </div>
+
+              <br>
+
+              <div>
+                <div class="col">
+                  <label for="apellido">Supervisor a cargo:</label>
+                  <input 
+                      type="text" 
+                      class="form-control" 
+                      name="apellido"
+                      
+                      required 
+                      placeholder="Supervisor a cargo" 
+                      minlength="5"
+                      maxlength="20" 
+                      />
+      
+                      <!--div class="alert-danger" *ngIf="apellido.errors && f.submitted">
+                          <div *ngIf="apellido.errors.required">Se requieren apellidos</div>
+                          <div *ngIf="apellido.errors.minlength">
+                            El apellido debe tener al menos 5 caracteres
+                          </div>
+                          <div *ngIf="apellido.errors.maxlength">
+                            El apellido debe tener como máximo 20 caracteres
+                          </div>
+                      </div-->
+      
+              </div>
+
+              </div>
+
+              <br>
+
+              <div>
+
+                  <div class="col">
+                      <label for="nombre">Registro de Inducción, Capacitación, Entrenamiento y Simulacros de Emergencia: --------</label>
+                  
+                      <a href="./documentos/C24-Ficha de evaluación de pasantías.doc" download>Descargar</a>
+
+                      <input 
+                          type="file" 
+                          class="form-control" 
+                          name="nombre"
+                          required/>
+      
+                          <!--div class="alert-danger" *ngIf="nombre.errors && f.submitted">
+                              <div *ngIf="nombre.errors.required">Se requiere nombre</div>
+                              <div *ngIf="nombre.errors.minlength">
+                                El nombre debe tener al menos 3 caracteres
+                              </div>
+                              <div *ngIf="nombre.errors.maxlength">
+                                El nombre de usuario debe tener como máximo 20 caracteres
+                              </div>
+                          </div-->
+      
+                  </div>              
+      
+              </div>          
+              
+              <br>
+
+              <div>
+
+                <div class="col">
+                    <label for="nombre">Registro de Capacitaciones Específicas:</label>
+                    <input 
+                        type="file" 
+                        class="form-control" 
+                        name="nombre"
+                        
+                        required 
+                      
+                        />
+    
+                        <!--div class="alert-danger" *ngIf="nombre.errors && f.submitted">
+                            <div *ngIf="nombre.errors.required">Se requiere nombre</div>
+                            <div *ngIf="nombre.errors.minlength">
+                              El nombre debe tener al menos 3 caracteres
+                            </div>
+                            <div *ngIf="nombre.errors.maxlength">
+                              El nombre de usuario debe tener como máximo 20 caracteres
+                            </div>
+                        </div-->
+                </div>              
+    
+              </div>
+
+              <br>
+
+              <div>
+
+              <div class="col">
+                  <label for="nombre">Análisis de Trabajo Seguro: --------</label>
+                  <a href="./documentos/C24-Ficha de evaluación de pasantías.doc" download>Descargar</a>
+
+
+                  <input 
+                      type="file" 
+                      class="form-control" 
+                      name="nombre"
+                      
+                      required 
+                    
+                      />
+  
+                      <!--div class="alert-danger" *ngIf="nombre.errors && f.submitted">
+                          <div *ngIf="nombre.errors.required">Se requiere nombre</div>
+                          <div *ngIf="nombre.errors.minlength">
+                            El nombre debe tener al menos 3 caracteres
+                          </div>
+                          <div *ngIf="nombre.errors.maxlength">
+                            El nombre de usuario debe tener como máximo 20 caracteres
+                          </div>
+                      </div-->
+              </div>              
+  
+              </div>
+
+              <br>
+
+              <div>
+
+            <div class="col">
+                <label for="nombre">Procedimiento Estándar de Trabajo Seguro: --------</label>
+            
+                <a href="./documentos/C24-Ficha de evaluación de pasantías.doc" download>Descargar</a>
+
+                <input 
+                    type="file" 
+                    class="form-control" 
+                    name="nombre"
+                    required/>
+
+                    <!--div class="alert-danger" *ngIf="nombre.errors && f.submitted">
+                        <div *ngIf="nombre.errors.required">Se requiere nombre</div>
+                        <div *ngIf="nombre.errors.minlength">
+                          El nombre debe tener al menos 3 caracteres
+                        </div>
+                        <div *ngIf="nombre.errors.maxlength">
+                          El nombre de usuario debe tener como máximo 20 caracteres
+                        </div>
+                    </div-->
+
+            </div>              
+
+              </div> 
+
+              <br>
+
+              <div>
+
+          <div class="col">
+              <label for="nombre">Identificación de Peligros, Evaluación de Riesgos y Medidas de Control: --------</label>
+          
+              <a href="./documentos/C24-Ficha de evaluación de pasantías.doc" download>Descargar</a>
+
+              <input 
+                  type="file" 
+                  class="form-control" 
+                  name="nombre"
+                  required/>
+
+                  <!--div class="alert-danger" *ngIf="nombre.errors && f.submitted">
+                      <div *ngIf="nombre.errors.required">Se requiere nombre</div>
+                      <div *ngIf="nombre.errors.minlength">
+                        El nombre debe tener al menos 3 caracteres
+                      </div>
+                      <div *ngIf="nombre.errors.maxlength">
+                        El nombre de usuario debe tener como máximo 20 caracteres
+                      </div>
+                  </div-->
+
+          </div>              
+
+              </div>
+
+              <br>
+
+              <div>
+                <div class="col">
+                  <label for="apellido">Nombre y Apellidos del Prevencionista:</label>
+                  <input 
+                      type="text" 
+                      class="form-control" 
+                      name="apellido"
+                      
+                      required 
+                      placeholder="Supervisor a cargo" 
+                      minlength="5"
+                      maxlength="20" 
+                      />
+      
+                      <!--div class="alert-danger" *ngIf="apellido.errors && f.submitted">
+                          <div *ngIf="apellido.errors.required">Se requieren apellidos</div>
+                          <div *ngIf="apellido.errors.minlength">
+                            El apellido debe tener al menos 5 caracteres
+                          </div>
+                          <div *ngIf="apellido.errors.maxlength">
+                            El apellido debe tener como máximo 20 caracteres
+                          </div>
+                      </div-->
+      
+              </div>
+
+              </div>
+
+              <br>
+
+              <div>
+
+                <div class="col">
+                    <label for="nombre">Permiso Escrito para Trabajos de Alto Riesgo: --------</label>
+                
+                    <a href="./documentos/C24-Ficha de evaluación de pasantías.doc" download>Descargar</a>
+      
+                    <input 
+                        type="file" 
+                        class="form-control" 
+                        name="nombre"
+                        required/>
+      
+                        <!--div class="alert-danger" *ngIf="nombre.errors && f.submitted">
+                            <div *ngIf="nombre.errors.required">Se requiere nombre</div>
+                            <div *ngIf="nombre.errors.minlength">
+                              El nombre debe tener al menos 3 caracteres
+                            </div>
+                            <div *ngIf="nombre.errors.maxlength">
+                              El nombre de usuario debe tener como máximo 20 caracteres
+                            </div>
+                        </div-->
+      
+                </div>              
+      
+              </div>
+
+              <br>
+
+              <div class="col">
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Enviar</button>
+              </div>
+            
+          </form>
+          
+        </div>
+      </mat-tab>
+
+    </mat-tab-group>
+
+  </mat-card>
+  
+</div>
+  

@@ -1,0 +1,94 @@
+<div class="text-center container p-2">
+    <button class="btn btn-primary" (click)="pdf()">Descargar Constancia de Inducción COVID-19</button>
+</div>
+
+  <div class="container p-5" style="width: 790;" id="pdf">
+
+    <table bgcolor="white" border="5" style="margin: 0 auto; width: 690px;">
+  
+      <div class="container row">
+        <div class="col-3" style="margin-right: 27px;">
+          
+          <div style="position: relative; top: 45px;">
+            <img style="width: 165%;" src="assets/logos/amarillo.png" alt="">
+          </div>
+
+          <div style="position: relative; left: 13px; top: -160px;">
+            <img style="max-width: 190px;" src="assets/logos/cero_ancidentes.png" alt="">
+          </div>
+
+        </div>
+  
+        <div class="col">
+          <br>
+        <h1 style="font-weight: bold; font-size: 4em;" color="red" class="text-center">CONSTANCIA</h1>
+        <br>
+  
+        <p class="text-center" style="font-size: 17px;">El área de Seguridad Industrial otorga la presente constancia a:</p>
+  
+        <p style="color:rgb(42, 42, 122);" class="text-center">{{ email }}</p>
+  
+        <p style="color:rgb(42, 42, 122);" class="text-center">TITANIC.SAC</p>
+  
+      
+  
+        <p class="text-center" style="font-size:17px;">Por haber aprobado satisfactoriamente el examen de</p>
+        <p class="text-center" style="font-size:19px; font-weight: bold;">Inducción de Medidas de Prevención y control contra el Covid-19</p>
+        <br>
+  
+        <div class="row">
+          <div class="col">
+            <p class="text-center" style=" height: min-content; line-height: normal; font-size: 14px;"></p>
+          </div>
+          
+          <div class="col">
+            <p style="line-height: normal; height: min-content; font-size: 14px;">Atte.</p>
+            <p class="text-center" style="line-height: normal; height: min-content; font-size: 14px; font-weight: bold;">El área de Seguridad Industrial.</p>
+          </div>
+
+          <div style="text-align: center; margin-bottom: 10px;">
+            <img style="max-width: 250px;" src="assets/logos/pmp.jpg">
+          </div>
+  
+        </div>
+
+        
+
+        </div>
+  
+        
+      
+        <!--h5 style="color: black;">Fecha de emisión: {{ today | date:'dd-MM-yyyy hh:mm:ss a' }}</h5-->
+              
+        <!--h5 style="color: black;">Fecha de vencimiento: {{ today | date:'dd-MM-yyyy hh:mm:ss a':'+9100'}}</h5-->
+
+        <div class="col">
+          <h5 style="color:gray;">Nota: Certificado válido por un año, a partir de la fecha de emisión</h5> 
+        </div>
+        
+        <div class="col-3">
+          <h5 style="color:black;">Lima, {{ today | date:'d MMMM'}} del {{ today | date: 'y' }}</h5>
+        </div>
+        
+  
+        <!--h5 align="right" style="color: black;">Área de Seguridad y Salud en el Trabajo </h5-->
+  
+      </div>
+  
+    </table>
+
+    <div style="text-align: right;">
+      <button class="btn btn-primary" (click)="ruta()">Siguiente</button>
+    </div>
+  
+  </div>
+
+
+
+
+
+
+
+
+
+

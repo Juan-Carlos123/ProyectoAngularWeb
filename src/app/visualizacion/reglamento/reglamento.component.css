@@ -1,0 +1,19 @@
+/* Ajusta el texto del párrafo a un cuerpo de letra muy grande. */
+p { font-size: xx-large }
+
+/* Ajusta la cabecera de nivel 1 (h1) a 2,5 veces del tamaño
+ * del texto. */
+h1 { font-size: 250% }
+
+/* Ajusta el texto incluido en span a 16px */
+span { font-size: 16px; }
+
+p{
+    font-size: 25px;
+}
+
+table{
+    background:#ffffff url() no-repeat center center;
+    background-size:100% 100%;
+}
+  

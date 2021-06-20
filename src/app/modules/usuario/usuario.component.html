@@ -1,0 +1,645 @@
+<!--div class="login-page">
+    <mat-card >
+      <mat-card-title style="text-align:center;">Datos del Trabajador</mat-card-title>
+
+      
+            <form 
+            *ngIf="!isSuccessful"
+            name="form"
+            (ngSubmit)="f.form.valid && onSubmit()"
+            #f="ngForm"
+            novalidate>
+
+              <mat-form-field>
+                <input
+                  matInput
+                  placeholder="Nombre"
+                  ngModel
+                
+                  type="text"
+                  name="nombre"
+                  [(ngModel)]="form.nombre"
+                  required
+                  minlength="3"
+                  maxlength="20"
+                  #nombre="ngModel">
+
+                <mat-icon matSuffix>perm_identity</mat-icon>
+                <mat-error *ngIf="nombre.invalid">¡Se requiere Nombre!</mat-error>
+              </mat-form-field>
+
+
+
+
+              
+
+              <mat-form-field>
+                <input
+                  matInput
+                  placeholder="Apellidos"
+                  ngModel
+                  
+                  type="text"
+                  name="apellido"
+                  [(ngModel)]="form.apellido"
+                  required
+                  minlength="3"
+                  maxlength="20"
+                  #apellidos="ngModel">
+
+                <mat-icon matSuffix>perm_identity</mat-icon>
+                <mat-error
+                  *ngIf="apellidos.invalid">
+                  ¡Se requiere Apellidos! 
+                </mat-error>
+              </mat-form-field-->
+
+            <!-----------------------edad--------------------------------->
+            <!--mat-form-field>
+              <input
+                matInput
+                placeholder="Edad"
+                name="edad"
+                ngModel
+                #edad="ngModel"
+                type="number"
+                [(ngModel)]="form.edad"
+                required
+                minlength="2"
+                maxlength="2"-->
+
+              <!--mat-icon matSuffix>perm_identity</mat-icon-->
+              <!--mat-error
+                *ngIf="edad.invalid">
+                ¡Se requiere Apellidos! 
+              </mat-error>
+            </mat-form-field>  
+
+              <mat-form-field>
+                <input
+                  matInput
+                  placeholder="Cargo"
+                  name="cargo"
+                  ngModel
+                  
+                  type="text"
+                  [(ngModel)]="form.cargo"
+                  required
+                  minlength="3"
+                  maxlength="20"
+                  #cargo="ngModel">
+                <mat-icon matSuffix>perm_identity</mat-icon>
+                <mat-error *ngIf="cargo.invalid">¡Se requiere Cargo!</mat-error>
+  
+              </mat-form-field>
+
+              <mat-form-field>
+                <input
+                  matInput
+                  placeholder="Fecha de Nacimiento"
+                  name="fecha_nacimiento"
+                  ngModel
+
+                  type="date"
+                  [(ngModel)]="form.fecha_nacimiento"
+                  required
+                  #nacimiento="ngModel">
+               
+                <mat-error
+                  *ngIf="nacimiento.invalid">
+                  ¡Se requiere Fecha de nacimiento!
+                </mat-error>
+  
+              </mat-form-field>
+
+              <mat-form-field>
+                <input
+                  matInput
+                  placeholder="DNI"
+                  name="dni"
+                  ngModel
+                  #dni="ngModel"
+                  
+                  type="number"
+                  [(ngModel)]="form.dni"
+                  required
+                  minlength="8"
+                  maxlength="8"-->
+                <!--mat-icon matSuffix>perm_identity</mat-icon-->
+                <!--mat-error
+                  *ngIf="dni.invalid">
+                  ¡Se requiere DNI!
+                </mat-error>
+  
+              </mat-form-field>
+
+              <mat-form-field>
+                <input
+                  matInput
+                  placeholder="Dirrección"
+                  name="direccion"
+                  ngModel
+                  #direccion="ngModel"
+
+                  type="text"
+                  [(ngModel)]="form.direccion"
+                  required
+                  minlength="3"
+                  maxlength="20">
+                <mat-icon matSuffix>perm_identity</mat-icon>
+                <mat-error
+                  *ngIf="direccion.invalid">
+                  ¡Se requiere Direccion!
+                </mat-error>
+  
+              </mat-form-field>
+
+              <mat-form-field>
+                <input
+                  matInput
+                  placeholder="Talla"
+                  name="talla"
+                  ngModel
+                  #talla="ngModel"
+                  type="number"
+                  [(ngModel)]="form.talla"
+                  required
+                  minlength="3"
+                  maxlength="4"-->
+                <!--mat-icon matSuffix>perm_identity</mat-icon-->
+                <!--mat-error
+                  *ngIf="talla.invalid">
+                  ¡Se requiere Talla!
+                </mat-error>
+  
+              </mat-form-field>
+
+              <mat-form-field>
+                <input
+                  matInput
+                  placeholder="Peso"
+                  name="peso"
+                  ngModel
+                  #peso="ngModel"
+                  
+                  type="number"
+                  [(ngModel)]="form.peso"
+                  required
+                  minlength="3"
+                  maxlength="4"-->
+                <!--mat-icon matSuffix>perm_identity</mat-icon-->
+                <!--mat-error
+                  *ngIf="peso.invalid">
+                  ¡Se requiere Peso!
+                </mat-error>
+  
+              </mat-form-field>
+
+              <mat-form-field>
+                <input
+                  matInput
+                  placeholder="Masa Corporal"
+                
+                  name="masa_corporal"
+                  ngModel
+                  #masacorporal="ngModel"
+                  
+                  
+                  type="number"
+                  [(ngModel)]="form.masa_corporal"
+                  required
+                  minlength="3"
+                  maxlength="4"-->
+                <!--mat-icon matSuffix>perm_identity</mat-icon-->
+                <!--mat-error
+                  *ngIf="masacorporal.invalid">
+                  ¡Se requiere Masa Corporal!
+                </mat-error>
+  
+              </mat-form-field>
+
+              <mat-form-field>
+                <input
+                  matInput
+                  placeholder="Teléfono"
+                  name="telefono"
+                  ngModel
+                  #telefono="ngModel"
+                  
+                  type="number"
+                  [(ngModel)]="form.telefono"
+                  required
+                  maxlength="9"-->
+                <!--mat-icon matSuffix>perm_identity</mat-icon-->
+                <!--mat-error
+                  *ngIf="telefono.invalid">
+                  ¡Se requiere Telefono!
+                </mat-error>
+  
+              </mat-form-field>
+    
+              <button
+                (click)="navigate()"
+                mat-raised-button
+                color="primary"
+                class="login-button">
+                Enviar
+              </button>
+            </form>
+            <div class="alert alert-success" *ngIf="isSuccessful">
+              ¡Tu registro es exitoso!
+            </div>
+    </mat-card>
+  </div>
+
+  <p style="text-align:center;">-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p-->
+  
+
+<div class="container p-5">
+<mat-card>
+  
+  <div class="container p-2" *ngIf="!submitted">
+    
+
+    <form name="form" #f="ngForm" (ngSubmit)="f.form.valid && onSubmit()" novalidate>
+
+      <h1 style="text-align:center;">Datos del Trabajador</h1>
+      
+        <div class="form-group row">
+
+            <div class="col">
+                <label for="nombre">Nombre</label>
+                <input 
+                    type="text" 
+                    class="form-control" 
+                    name="nombre"
+                    [(ngModel)]="form.nombre"
+                    required 
+                    placeholder="Nombre" 
+                    minlength="3"
+                    maxlength="20" 
+                    #nombre="ngModel"/>
+
+                    <div class="alert-danger" *ngIf="nombre.errors && f.submitted">
+                        <div *ngIf="nombre.errors.required">Se requiere nombre</div>
+                        <div *ngIf="nombre.errors.minlength">
+                          El nombre debe tener al menos 3 caracteres
+                        </div>
+                        <div *ngIf="nombre.errors.maxlength">
+                          El nombre de usuario debe tener como máximo 20 caracteres
+                        </div>
+                    </div>
+
+            </div>
+
+            <div class="col">
+              <label for="apellido">Apellidos</label>
+              <input 
+                  type="text" 
+                  class="form-control" 
+                  name="apellido"
+                  [(ngModel)]="form.apellido"
+                  required 
+                  placeholder="Apellidos" 
+                  minlength="5"
+                  maxlength="20" 
+                  #apellido="ngModel"/>
+
+                  <div class="alert-danger" *ngIf="apellido.errors && f.submitted">
+                      <div *ngIf="apellido.errors.required">Se requieren apellidos</div>
+                      <div *ngIf="apellido.errors.minlength">
+                        El apellido debe tener al menos 5 caracteres
+                      </div>
+                      <div *ngIf="apellido.errors.maxlength">
+                        El apellido debe tener como máximo 20 caracteres
+                      </div>
+                  </div>
+
+          </div>
+
+            
+
+        </div>
+
+        <br>
+
+        <div class="form-group row">
+
+          <div class="col">
+            <label for="edad">Edad</label>
+            <input 
+                type="text"
+                class="form-control" 
+                name="edad"
+                [(ngModel)]="form.edad"
+                required 
+                placeholder="Edad"
+                minlength="2"
+                maxlength="2" 
+                #edad="ngModel"/>
+
+                <div class="alert-danger" *ngIf="edad.errors && f.submitted">
+                    <div *ngIf="edad.errors.required">Se requiere edad</div>
+                    <div *ngIf="edad.errors.minlength">
+                      La edad debe tener al menos 2 caracteres
+                    </div>
+                    <div *ngIf="edad.errors.maxlength">
+                      La edad debe tener como máximo 2 caracteres
+                    </div>
+                </div>
+
+        </div>
+
+        <div class="col">
+          <label for="cargo">Cargo</label>
+          <input 
+              type="text" 
+              class="form-control" 
+              name="cargo"
+              [(ngModel)]="form.cargo"
+              required 
+              placeholder="Cargo" 
+              minlength="3"
+              maxlength="20" 
+              #cargo="ngModel"/>
+
+              <div class="alert-danger" *ngIf="cargo.errors && f.submitted">
+                  <div *ngIf="cargo.errors.required">Se requiere cargo</div>
+                  <div *ngIf="cargo.errors.minlength">
+                    El cargo debe tener al menos 3 caracteres
+                  </div>
+                  <div *ngIf="cargo.errors.maxlength">
+                    EL cargo debe tener un máximo de 20 caracteres.
+                  </div>
+              </div>
+
+      </div>
+
+      <div class="col">
+        <label for="fecha_nacimiento">Fecha de Nacimiento</label>
+        <input 
+            type="date" 
+            class="form-control" 
+            name="fecha_nacimiento"
+            [(ngModel)]="form.fecha_nacimiento"
+            required 
+            placeholder="Fecha de Nacimiento" 
+            #fecha_nacimiento="ngModel"/>
+
+            <div class="alert-danger" *ngIf="fecha_nacimiento.errors && f.submitted">
+                <div *ngIf="fecha_nacimiento.errors.required">Se requiere Fecha de Nacimiento</div>
+                <div *ngIf="fecha_nacimiento.errors.minlength">
+                  Fecha de Nacimiento must be at least 3 characters
+                </div>
+                <div *ngIf="fecha_nacimiento.errors.maxlength">
+                  Fecha de Nacimiento must be at most 20 characters
+                </div>
+            </div>
+
+    </div>
+
+        </div>
+
+        <br>
+
+
+        <div class="form-group row">
+
+          <div class="col">
+            <label for="dni">DNI</label>
+            <input 
+                type="text" 
+                class="form-control" 
+                name="dni"
+                [(ngModel)]="form.dni"
+                required 
+                placeholder="DNI" 
+                minlength="8"
+                maxlength="8" 
+                #dni="ngModel"/>
+
+                <div class="alert-danger" *ngIf="dni.errors && f.submitted">
+                    <div *ngIf="dni.errors.required">Se requiere DNI</div>
+                    <div *ngIf="dni.errors.minlength">
+                      El DNI debe tener al menos 8 caracteres
+                    </div>
+                    <div *ngIf="dni.errors.maxlength">
+                      El DNI debe tener como máximo 8 caracteres
+                    </div>
+                </div>
+
+        </div>
+
+        <div class="col">
+          <label for="direccion">Dirección</label>
+          <input 
+              type="text" 
+              class="form-control" 
+              name="direccion"
+              [(ngModel)]="form.direccion"
+              required 
+              placeholder="Dirección" 
+              minlength="3"
+              maxlength="20" 
+              #direccion="ngModel"/>
+
+              <div class="alert-danger" *ngIf="direccion.errors && f.submitted">
+                  <div *ngIf="direccion.errors.required">Se requiere direccion</div>
+                  <div *ngIf="direccion.errors.minlength">
+                    La direccion debe tener al menos 3 caracteres
+                  </div>
+                  <div *ngIf="direccion.errors.maxlength">
+                    La direccion debe tener como máximo 20 caracteres
+                  </div>
+              </div>
+
+      </div>
+
+      <div class="col">
+        <label for="nombre">Talla</label>
+        <input 
+            type="text" 
+            class="form-control" 
+            name="talla"
+            [(ngModel)]="form.talla"
+            required 
+            placeholder="0.00" 
+            minlength="4"
+            maxlength="4" 
+            #talla="ngModel"/>
+
+            <div class="alert-danger" *ngIf="talla.errors && f.submitted">
+                <div *ngIf="talla.errors.required">Se requiere talla</div>
+                <div *ngIf="talla.errors.minlength">
+                  La talla debe tener al menos 3 caracteres
+                </div>
+                <div *ngIf="talla.errors.maxlength">
+                  La talla debe tener como máximo 3 caracteres
+                </div>
+            </div>
+
+    </div>
+
+        </div>
+
+        <br>
+
+
+        <div class="form-group row">
+
+          <div class="col">
+            <label for="peso">Peso</label>
+            <input 
+                type="text" 
+                class="form-control" 
+                name="peso"
+                [(ngModel)]="form.peso"
+                required 
+                placeholder="00" 
+                minlength="2"
+                maxlength="2" 
+                #peso="ngModel"/>
+
+                <div class="alert-danger" *ngIf="peso.errors && f.submitted">
+                    <div *ngIf="peso.errors.required">Se requiere peso</div>
+                    <div *ngIf="peso.errors.minlength">
+                      El peso debe tener al menos 2 caracteres
+                    </div>
+                    <div *ngIf="peso.errors.maxlength">
+                     El peso debe tener como máximo 2 caracteres
+                    </div>
+                </div>
+
+        </div>
+
+        <!--div class="col">
+          <label for="masa_corporal">Masa Corporal</label>
+          <input 
+              type="text" 
+              class="form-control" 
+              name="masa_corporal"
+              [(ngModel)]="form.masa_corporal"
+              required 
+              placeholder="0.0" 
+              minlength="3"
+              maxlength="3" 
+              #masa_corporal="ngModel"/>
+
+              <div class="alert-danger" *ngIf="masa_corporal.errors && f.submitted">
+                  <div *ngIf="masa_corporal.errors.required">Se requiere masa corporal</div>
+                  <div *ngIf="masa_corporal.errors.minlength">
+                    La masa corporal debe tener al menos 3 caracteres
+                  </div>
+                  <div *ngIf="masa_corporal.errors.maxlength">
+                    La masa corporal debe tener como máximo 3 caracteres
+                  </div>
+              </div>
+
+      </div-->
+
+      <div class="col">
+        <label for="telefono">Teléfono</label>
+        <input 
+            type="text" 
+            class="form-control" 
+            name="telefono"
+            [(ngModel)]="form.telefono"
+            required 
+            placeholder="Teléfono" 
+            minlength="9"
+            maxlength="9" 
+            #telefono="ngModel"/>
+
+            <div class="alert-danger" *ngIf="telefono.errors && f.submitted">
+                <div *ngIf="telefono.errors.required">Se requiere teléfono</div>
+                <div *ngIf="telefono.errors.minlength">
+                  El teléfono debe tener al menos 9 caracteres
+                </div>
+                <div *ngIf="telefono.errors.maxlength">
+                  El teléfono debe tener como máximo 9 caracteres
+                </div>
+            </div>
+
+    </div>
+
+        </div>
+
+        <br>
+        
+        <button type="submit" class="btn btn-primary" (click)="onSubmit()" style="width: 100%;">Enviar</button>
+    </form>
+</div>
+
+<div *ngIf="submitted" style="text-align: center;">
+  <h4>Ya registrastes tus datos!</h4>
+  <button class="btn btn-success" (click)="navigate()">Ver datos</button>
+</div>
+
+
+<!---------------------------------------------------------Listado de Datos --------------------------------------------------------->
+
+<div class="container p-3" *ngIf="submitted">
+  <h1 style="text-align: center;">"Revisar sus datos si están correctos, en caso de una equivocación en sus datos   
+    dar click en la boton EDITAR para modificar y si todo 
+    está correcto dar click en el botón SIGUIENTE"</h1>
+</div>
+
+<div class="container p-5" *ngIf="submitted">
+    <table class="table">
+      <thead class="table-dark">
+        <tr>
+        <!--th scope="col">#</th-->
+        <th scope="col">Id</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Apellidos</th>
+        <th scope="col">Edad</th>
+        <th scope="col">Cargo</th>
+        <th scope="col">Fecha de Nacimiento</th>
+        <th scope="col">DNI</th>
+        <th scope="col">Dirección</th>
+        <th scope="col">Talla</th>
+        <th scope="col">Peso</th>
+        <th scope="col">Masa Corporal</th>
+        <th scope="col">Teléfono</th>
+        <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let con of content; index as i">
+        <!--th scope="row">{{i+1}}</th-->
+        <td>{{ con.id }}</td>
+        <td>{{con.nombre}}</td>
+        <td>{{con.apellido}}</td>
+        <td>{{con.edad}}</td>
+        <td>{{con.cargo}}</td>
+        <td>{{con.fecha_nacimiento}}</td>
+        <td>{{con.dni}}</td>
+        <td>{{con.direccion}}</td>
+        <td>{{con.talla}} Metros</td>
+        <td>{{con.peso}} Kilos</td>
+        <td>{{con.masa_corporal}} IMC</td>
+        <td>{{con.telefono}}</td>
+        <td> 
+            <button class="btn btn-primary" (click)="editarTrabajador(con.id)">Editar</button> 
+        </td>
+        </tr>
+      </tbody>
+    </table>   
+
+    <div style="text-align: right; margin-top: 30px;">
+      <button class="btn btn-success" (click)="seguridad()">Siguiente</button>
+    </div>
+    
+
+</div>
+
+</mat-card>
+</div>
+
+
+
+<!---------------------------------------------------------Listado de Datos --------------------------------------------------------->
+
+
+
+       

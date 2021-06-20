@@ -1,0 +1,196 @@
+<div class="container p-5">
+
+    <h1 class="text-center">INDUCCIÓN DE SEGURIDAD INDUSTRIAL</h1>
+
+
+    <div *ngIf="!result" style="border-radius: 30px; box-shadow: 0 6px 6px  #777;">
+            <!--h1 class="text-center">Inducción de Seguridad Industrial</h1-->
+        <div class="container p-4">
+            <!--p class="text-center">1 de {{ quizzes.length }} preguntas</p-->
+            <h1 style="text-align: left;">{{ quizzes[0].question}}</h1>
+
+            <ul class="list-group" *ngFor="let quiz of quizzes[0].answer">
+                <br>
+                <label>
+                    <li class="list-group-item">
+                        <input type="radio" name="option1" (click)="onAnswer(quiz.correct)">
+                        {{ quiz.option }}
+                    </li>
+                    
+                </label>
+            </ul>
+        </div>
+
+        <div class="container p-4">
+            <!--p class="text-center">1 de {{ quizzes.length }} preguntas</p-->
+            <h1 style="text-align: left;">{{ quizzes[1].question}}</h1>
+
+            <ul class="list-group" *ngFor="let quiz of quizzes[1].answer">
+                <br>
+                <label>
+                    <li class="list-group-item">
+                        <input type="radio" name="option2" (change)="onAnswer(quiz.correct)" >
+                        {{ quiz.option }}
+                    </li>
+                    
+                </label>
+            </ul>
+        </div>
+
+        <div class="container p-4">
+            <!--p class="text-center">1 de {{ quizzes.length }} preguntas</p-->
+            <h1 style="text-align: left;">{{ quizzes[2].question}}</h1>
+
+            <ul class="list-group" *ngFor="let quiz of quizzes[2].answer">
+                <br>
+                <label>
+                    <li class="list-group-item">
+                        <input type="radio" name="option3" (change)="onAnswer(quiz.correct)" >
+                        {{ quiz.option }}
+                    </li>
+                    
+                </label>
+            </ul>
+        </div>
+
+        <div class="container p-4">
+            <!--p class="text-center">1 de {{ quizzes.length }} preguntas</p-->
+            <h1 style="text-align: left;">{{ quizzes[3].question}}</h1>
+
+            <ul class="list-group" *ngFor="let quiz of quizzes[3].answer">
+                <br>
+                <label>
+                    <li class="list-group-item">
+                        <input type="radio" name="option4" (change)="onAnswer(quiz.correct)" >
+                        {{ quiz.option }}
+                    </li>
+                    
+                </label>
+            </ul>
+        </div>
+
+        <div class="container p-4">
+            <!--p class="text-center">1 de {{ quizzes.length }} preguntas</p-->
+            <h1 style="text-align: left;">{{ quizzes[4].question}}</h1>
+
+            <ul class="list-group" *ngFor="let quiz of quizzes[4].answer">
+                <br>
+                <label>
+                    <li class="list-group-item">
+                        <input type="radio" name="option5" (change)="onAnswer(quiz.correct)" >
+                        {{ quiz.option }}
+                    </li>
+                    
+                </label>
+            </ul>
+        </div>
+
+        <div class="container p-4">
+            <!--p class="text-center">1 de {{ quizzes.length }} preguntas</p-->
+            <h1 style="text-align: left;">{{ quizzes[5].question}}</h1>
+
+            <ul class="list-group" *ngFor="let quiz of quizzes[5].answer">
+                <br>
+                <label>
+                    <li class="list-group-item">
+                        <input type="radio" name="option6" (change)="onAnswer(quiz.correct)" >
+                        {{ quiz.option }}
+                    </li>
+                    
+                </label>
+            </ul>
+        </div>
+
+        <div class="container p-4">
+            <!--p class="text-center">1 de {{ quizzes.length }} preguntas</p-->
+            <h1 style="text-align: left;">{{ quizzes[6].question}}</h1>
+
+            <ul class="list-group" *ngFor="let quiz of quizzes[6].answer">
+                <br>
+                <label>
+                    <li class="list-group-item">
+                        <input type="radio" name="option7" (change)="onAnswer(quiz.correct)" >
+                        {{ quiz.option }}
+                    </li>
+                    
+                </label>
+            </ul>
+        </div>
+
+        <div class="container p-4">
+            <!--p class="text-center">1 de {{ quizzes.length }} preguntas</p-->
+            <h1 style="text-align: left;">{{ quizzes[7].question}}</h1>
+
+            <ul class="list-group" *ngFor="let quiz of quizzes[7].answer">
+                <br>
+                <label>
+                    <li class="list-group-item">
+                        <input type="radio" name="option8" (change)="onAnswer(quiz.correct)" >
+                        {{ quiz.option }}
+                    </li>
+                    
+                </label>
+            </ul>
+        </div>
+
+        <div class="container p-4">
+            <!--p class="text-center">1 de {{ quizzes.length }} preguntas</p-->
+            <h1 style="text-align: left;">{{ quizzes[8].question}}</h1>
+
+            <ul class="list-group" *ngFor="let quiz of quizzes[8].answer">
+                <br>
+                <label>
+                    <li class="list-group-item">
+                        <input type="radio" name="option9" (change)="onAnswer(quiz.correct)" >
+                        {{ quiz.option }}
+                    </li>
+                    
+                </label>
+            </ul>
+        </div>
+
+        <div class="container p-4">
+            <!--p class="text-center">1 de {{ quizzes.length }} preguntas</p-->
+            <h1 style="text-align: left;">{{ quizzes[9].question}}</h1>
+
+            <ul class="list-group" *ngFor="let quiz of quizzes[9].answer">
+                <br>
+                <label>
+                    <li class="list-group-item">
+                        <input type="radio" name="option10" (change)="onAnswer(quiz.correct)" >
+                        {{ quiz.option }}
+                    </li>
+                    
+                </label>
+            </ul>
+        </div>
+    </div>
+    
+    <br>
+
+    <div *ngIf="!result" style="text-align:right;">
+        <button class="btn btn-primary" (click)="showResult()">Enviar</button>
+    </div>
+
+
+    <div style="text-align: center;" *ngIf="result" >
+
+        <div class="container p-3">
+            <h1 style="text-align: center;">"Si en caso haiya aprobado la "Inducción de Seguridad Industrial" dar click en VER CONSTANCIA, o si a desaprobado la Inducción dar click en VOLVER AL VIDEO"</h1>
+        </div>
+
+        <label style="text-align: center; width: 100%;" class="btn btn-success btn-block">Detalle del Resultado</label>
+
+        <div class="text-center">
+            <br>
+
+            <h1>Respuestas correctas: {{ correctAnswers }} | Respuestas incorrectas: {{ incorrectAnswers }}</h1>    
+
+            <button class="btn btn-success" [routerLink]="['/constancia seguridad']" *ngIf='correctAnswers > 6'>Ver Constancia</button>
+            <button class="btn btn-success" (click)="siguiente()" *ngIf='incorrectAnswers > 3 || incorrectAnswers == 0'>Volver al Video</button>
+        </div>
+        
+    </div>
+
+        
+</div>

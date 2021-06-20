@@ -1,0 +1,41 @@
+<div class="container p-3">
+    <h1 style="text-align: center;">"Revisar sus datos si están correctos, en caso de una equivocación en sus datos   
+      dar click en la boton EDITAR para modificar y si todo 
+      está correcto dar click en el botón SIGUIENTE"</h1>
+</div>
+  
+<div class="container p-5">
+  <table class="table">
+      <thead class="table-dark">
+        <tr>
+        <!--th scope="col">#</th-->
+        <th scope="col">1. Nomina del Personal</th>
+        <th scope="col">2. Prueba Antígeno Covid</th>
+        <th scope="col">3. Examen médico del Paciente</th>
+        <th scope="col">4. RICESE</th>
+        <th scope="col"></th>
+        </tr>
+
+      </thead>
+      <tbody>
+        <tr>
+
+        <td *ngFor="let file of fileInfos | async">
+          <a href=" {{ file.url}} "> {{ file.name }} </a>
+        </td>
+
+        <td> 
+            <button class="btn btn-primary" (click)="Nuevo()">Editar</button> 
+        </td>
+      </tr>
+      </tbody>
+  </table>   
+
+  <div style="text-align: right; margin-top: 30px;">
+    <button class="btn btn-success" (click)="Pase()">Siguiente</button>
+  </div>
+    
+</div>
+  
+
+             

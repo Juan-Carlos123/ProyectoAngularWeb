@@ -1,0 +1,62 @@
+<div class="container p-3">
+  <h1 style="text-align: center;">"Revisar sus datos si están correctos, en caso de una equivocación en sus datos   
+    dar click en la boton EDITAR para modificar y si todo 
+    está correcto dar click en el botón SIGUIENTE"</h1>
+</div>
+
+<div class="container p-5">
+    <table class="table">
+      <thead class="table-dark">
+        <tr>
+        <!--th scope="col">#</th-->
+        <th scope="col">Id</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Apellidos</th>
+        <th scope="col">Edad</th>
+        <th scope="col">Cargo</th>
+        <th scope="col">Fecha de Nacimiento</th>
+        <th scope="col">DNI</th>
+        <th scope="col">Dirección</th>
+        <th scope="col">Talla</th>
+        <th scope="col">Peso</th>
+        <th scope="col">Masa Corporal</th>
+        <th scope="col">Teléfono</th>
+        <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let con of content; index as i">
+        <!--th scope="row">{{i+1}}</th-->
+        <td>{{ con.id }}</td>
+        <td>{{con.nombre}}</td>
+        <td>{{con.apellido}}</td>
+        <td>{{con.edad}}</td>
+        <td>{{con.cargo}}</td>
+        <td>{{con.fecha_nacimiento}}</td>
+        <td>{{con.dni}}</td>
+        <td>{{con.direccion}}</td>
+        <td>{{con.talla}} Metros</td>
+        <td>{{con.peso}} Kilos</td>
+        <td>{{con.masa_corporal}} IMC</td>
+        <td>{{con.telefono}}</td>
+        <td> 
+            <button class="btn btn-primary" (click)="editarTrabajador(con.id)">Editar</button> 
+        </td>
+        </tr>
+      </tbody>
+    </table>   
+
+    <div style="text-align: right; margin-top: 30px;">
+      <button class="btn btn-success" (click)="seguridad()">Siguiente</button>
+    </div>
+    
+
+</div>
+
+
+           
+
+  
+
+
+
